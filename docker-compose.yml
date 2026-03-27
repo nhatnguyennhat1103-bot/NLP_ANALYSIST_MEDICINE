@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nlp-app:
+    build: .
+    container_name: medical_ner_container
+    volumes:
+      # Giúp bạn sửa code ở máy thật thì code trong Docker tự cập nhật
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
